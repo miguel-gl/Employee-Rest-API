@@ -6,8 +6,8 @@ package com.employees.api.domain.exception;
  * Date: 2025-05-21
  * Version: 1.0
  */
-public class EmpleadoNotFoundException extends RuntimeException{
-    public EmpleadoNotFoundException(String mensaje) {
+public class EmployeeNotFoundException extends RuntimeException{
+    public EmployeeNotFoundException(String mensaje) {
         super(mensaje);
     }
 }
