@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "7c3f8190-3d12-44d3-b0c1-43b797dc09e0",
+		"name": "Employees Collection By Miguel Angel Gonzalez Lopez",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1913833"
+	},
+	"item": [
+		{
+			"name": "Create Employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"firstName\": \"Miguel\",\r\n    \"secondName\": \"Angel\",\r\n    \"firstLastName\": \"Gonzalez\",\r\n    \"secondLastName\": \"Lopez\",\r\n    \"age\": 28,\r\n    \"sex\": \"M\",\r\n    \"date\": \"20-05-1996\",\r\n    \"position\": \"Dev\"\r\n  },\r\n  {\r\n    \"firstName\": \"Lupita\",\r\n    \"secondName\": \"María\",\r\n    \"firstLastName\": \"Sánchez\",\r\n    \"secondLastName\": \"Flores\",\r\n    \"age\": 26,\r\n    \"sex\": \"F\",\r\n    \"date\": \"10-02-1998\",\r\n    \"position\": \"QA\"\r\n  },\r\n  {\r\n    \"firstName\": \"Toño\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Rodríguez\",\r\n    \"secondLastName\": \"Vega\",\r\n    \"age\": 30,\r\n    \"sex\": \"M\",\r\n    \"date\": \"05-07-1993\",\r\n    \"position\": \"PO\"\r\n  },\r\n  {\r\n    \"firstName\": \"Gera\",\r\n    \"secondName\": \"Manue\",\r\n    \"firstLastName\": \"Martínez\",\r\n    \"secondLastName\": \"Lopez\",\r\n    \"age\": 25,\r\n    \"sex\": \"M\",\r\n    \"date\": \"15-09-1998\",\r\n    \"position\": \"DevOps\"\r\n  },\r\n  {\r\n    \"firstName\": \"Tere\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Ramírez\",\r\n    \"secondLastName\": \"Ortiz\",\r\n    \"age\": 29,\r\n    \"sex\": \"F\",\r\n    \"date\": \"22-11-1994\",\r\n    \"position\": \"UX\"\r\n  },\r\n  {\r\n    \"firstName\": \"Beto\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Cruz\",\r\n    \"secondLastName\": \"Jiménez\",\r\n    \"age\": 32,\r\n    \"sex\": \"M\",\r\n    \"date\": \"01-04-1992\",\r\n    \"position\": \"BA\"\r\n  },\r\n  {\r\n    \"firstName\": \"Paty\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Luna\",\r\n    \"secondLastName\": \"Castro\",\r\n    \"age\": 27,\r\n    \"sex\": \"F\",\r\n    \"date\": \"13-08-1996\",\r\n    \"position\": \"Scrum\"\r\n  },\r\n  {\r\n    \"firstName\": \"Pepe\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Mendoza\",\r\n    \"secondLastName\": \"Ruiz\",\r\n    \"age\": 31,\r\n    \"sex\": \"M\",\r\n    \"date\": \"09-03-1993\",\r\n    \"position\": \"DBA\"\r\n  },\r\n  {\r\n    \"firstName\": \"Chon\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Ríos\",\r\n    \"secondLastName\": \"Morales\",\r\n    \"age\": 24,\r\n    \"sex\": \"M\",\r\n    \"date\": \"03-12-2000\",\r\n    \"position\": \"FE\"\r\n  },\r\n  {\r\n    \"firstName\": \"Paco\",\r\n    \"secondName\": \"Enrique\",\r\n    \"firstLastName\": \"Navarro\",\r\n    \"secondLastName\": \"Salas\",\r\n    \"age\": 33,\r\n    \"sex\": \"M\",\r\n    \"date\": \"28-06-1990\",\r\n    \"position\": \"BE\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/employees",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/employees",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"\",\r\n    \"secondName\": \"\",\r\n    \"firstLastName\": \"Gonzalez\",\r\n    \"secondLastName\": \"Perez\",\r\n    \"age\": 30,\r\n    \"sex\": \"F\",\r\n    \"date\": \"19-05-1994\",\r\n    \"position\": \"PMO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/employees/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"employees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/employees/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
