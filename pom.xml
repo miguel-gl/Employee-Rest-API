@@ -12,7 +12,7 @@
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api</name>
-	<description>Demo project for Spring Boot</description>
+	<description>This is a REST API whit Clean Architecture for managment CRUD of Empoyees</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -131,7 +131,7 @@
 				<version>0.8.10</version>
 				<configuration>
 					<excludes>
-					<exclude>com/prueba/api/infrastructure/mapper/*Mapper*</exclude>
+					<exclude>**/*Mapper*.class</exclude>
 					</excludes>
 				</configuration>
 				<executions>
@@ -151,5 +151,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
