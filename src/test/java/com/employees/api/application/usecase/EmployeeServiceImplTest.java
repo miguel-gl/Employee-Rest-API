@@ -6,7 +6,7 @@ import org.mockito.*;
 import com.employees.api.adapter.web.dto.request.EmployeeRequest;
 import com.employees.api.adapter.web.dto.response.EmployeeResponse;
 import com.employees.api.application.port.output.EmployeeRepository;
-import com.employees.api.domain.exception.EmpleadoNotFoundException;
+import com.employees.api.domain.exception.EmployeeNotFoundException;
 import com.employees.api.domain.model.Employee;
 import com.employees.api.infrastructure.mapper.EmployeeMapper;
 import java.util.List;
@@ -98,7 +98,7 @@ void testGetEmployees_returnsList() {
 
         when(employeeRepository.existsById(id)).thenReturn(false);
 
-        assertThrows(EmpleadoNotFoundException.class, () -> employeeService.updateEmployee(id, request));
+        assertThrows(EmployeeNotFoundException.class, () -> employeeService.updateEmployee(id, request));
         verify(employeeRepository, never()).save(any());
     }
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.employees.api.domain.exception.EmpleadoNotFoundException;
+import com.employees.api.domain.exception.EmployeeNotFoundException;
 
 import java.util.List;
 
@@ -42,8 +42,8 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(new ErrorResponse("Violación de restricciones", details));
     }
     
-    @ExceptionHandler(EmpleadoNotFoundException.class)
-    public ResponseEntity<String> handleEmpleadoNoEncontrado(EmpleadoNotFoundException ex) {
+    @ExceptionHandler(EmployeeNotFoundException.class)
+    public ResponseEntity<String> handleEmpleadoNoEncontrado(EmployeeNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 }

@@ -8,7 +8,7 @@ import com.employees.api.adapter.web.dto.request.EmployeeRequest;
 import com.employees.api.adapter.web.dto.response.EmployeeResponse;
 import com.employees.api.application.port.input.EmployeeService;
 import com.employees.api.application.port.output.EmployeeRepository;
-import com.employees.api.domain.exception.EmpleadoNotFoundException;
+import com.employees.api.domain.exception.EmployeeNotFoundException;
 import com.employees.api.domain.model.Employee;
 import com.employees.api.infrastructure.mapper.EmployeeMapper;
 
@@ -44,7 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void updateEmployee(Long id, EmployeeRequest employee) {
          if (!employeeRepository.existsById(id)) {
-            throw new EmpleadoNotFoundException("Employee " + id + " Not found.");
+            throw new EmployeeNotFoundException("Employee " + id + " Not found.");
         }
         Employee domain = mapper.fromRequestToDomain(employee);
         domain.setId(id);

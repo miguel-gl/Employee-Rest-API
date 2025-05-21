@@ -43,6 +43,8 @@ src/
 ├── adapter/web/ → Controladores REST y DTOs  
 ├── infrastructure/ → JPA, mapeos, filtros y configuración
 
+![alt text](readmeImages/image10.png)
+
 ## Manejo de excepciones
 
 - Manejadas globalmente usando `@ControllerAdvice` con un`GlobalExceptionHandler`.
@@ -60,7 +62,8 @@ src/
 ---
 ### Testabilidad y mantenibilidad
 El archivo de Coverage se encuentra aqui:
-🧪[jacoco Report](target/site/jacoco/index.html)
+🧪jacoco Report : `target/site/jacoco/index.html`
+
 ![alt text](readmeImages/image-6.png)
 
 - La lógica de negocio (`EmployeeServiceImpl`) es independiente de Spring, facilitando pruebas unitarias puras.
@@ -154,6 +157,8 @@ mvn spring-boot:run
 
 # Postman
 La coleccion de postman 	ue se uso para realizar pruebas funcionales esta dentro del repoaitorio:
+
+
 📚[Colección de Postman](src\test\java\com\employees\api\postman\Employees-Collection.postman_collection.json)
 
 ---

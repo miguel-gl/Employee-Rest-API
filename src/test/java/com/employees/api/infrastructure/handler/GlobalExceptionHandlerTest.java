@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import com.employees.api.domain.exception.EmpleadoNotFoundException;
+import com.employees.api.domain.exception.EmployeeNotFoundException;
 
 
 import jakarta.validation.Path;
@@ -36,7 +36,7 @@ class GlobalExceptionHandlerTest {
     @Test
     void handleEmpleadoNotFound_returns404() {
         String mensaje = "Empleado con ID 99 no encontrado";
-        EmpleadoNotFoundException ex = new EmpleadoNotFoundException(mensaje);
+        EmployeeNotFoundException ex = new EmployeeNotFoundException(mensaje);
 
         ResponseEntity<String> response = handler.handleEmpleadoNoEncontrado(ex);
 
