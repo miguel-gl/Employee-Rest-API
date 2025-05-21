@@ -40,7 +40,7 @@ public class EmployeesController {
 
     @Operation(summary = "Get All Employees in BD")
     @GetMapping
-    public ResponseEntity<List<EmployeeResponse>> listarTodos() {
+    public ResponseEntity<List<EmployeeResponse>> getAllEmployees() {
         logger.info("Get all Request In Controller");
         List<EmployeeResponse> employees = employeeService.getEmployees();
         return ResponseEntity.ok(employees);
